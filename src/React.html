@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostilas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="JavaScript.html">JavaScript</a>
+                </li>
+                <li>
+                    <a href="React.html">React</a>
+                </li>
+                <li>
+                    <a href="RN.html">React Native</a>
+                </li>
+                <li>
+                    <a href="php.html">PHP</a>
+                </li>
+                <li>
+                    <a href="html.html">HTML</a>
+                </li>
+                <li>
+                    <a href="css.html">CSS</a>
+                </li>
+                <li>
+                    <a href="kotlin.html">KOTLIN</a>
+                </li>
+                <li>
+                    <a href="contato.html">Contate-me</a>
+                </li>
+            </ul>
+        </nav>    
+    </header>
+    <main>
+
+      <h1>
+        React
+      </h1>
+      <h2>
+        1. Introdução ao React
+      </h2>
+      <h3>
+        O que é React e por que utilizá-lo: 
+      </h3>
+      <p>
+        React é uma biblioteca JavaScript utilizada para construir interfaces de usuário (UI) interativas. É eficiente pois atualiza apenas partes específicas da UI quando o estado dos dados muda, ao invés de renderizar a página inteira. Aqui está um exemplo básico:
+      </p>
+      <p>
+        Exemplo simples de um componente React:
+      </p>
+      <div style="background-color: gray;"> 
+        <p>
+          import React from 'react';
+          <p>
+            function App() {
+          </p>
+            return (
+              <div>
+                <h1>Olá, React!</h1>
+                <p>Bem-vindo ao meu primeiro aplicativo React.</p>
+              </div>
+              );
+            }
+           <p>
+             export default App;
+           </p> 
+          </p>
+      </div>
+      <h3>
+        Configuração do ambiente (Create React App): 
+      </h3>
+      <p>
+        O Create React App é uma ferramenta oficial para iniciar rapidamente um projeto React. Comandos como npx create-react-app my-app configuram a estrutura básica de pastas e arquivos para começar a desenvolver em React.
+      </p>
+      <h2>
+        2. Componentes
+      </h2>
+      <p>
+        <h4>Conceito de componentes:</h4>
+      </p>
+      <p>
+        Componentes são blocos de construção reutilizáveis em React. Aqui está um exemplo de um componente funcional simples:
+      </p>
+      <p>
+        Exemplo de componente funcional em React:
+      </p>
+      <div style="background-color: gray;"> 
+        <p>
+          import React from 'react';
+          <p>
+            function Welcome(props) {
+          </p>
+            return <h1>Olá, {props.nome}</h1>;
+          }
+          <p>
+            export default Welcome;
+          </p>
+        </p>
+      </div>
+      <h3>
+        Props e State:
+      </h3>
+      <p>
+        Props são utilizados para passar dados de um componente pai para um componente filho. State é gerenciado internamente pelo componente e pode mudar ao longo do tempo. 
+      </p>
+      <p>
+        Exemplo de uso de props e state:
+      </p>
+      <div style="background-color: gray;"> 
+
+        import React, { useState } from 'react';
+        <p>
+          function Counter() {
+        </p>
+          const [count, setCount] = useState(0); // useState para gerenciar o estado
+
+          return (
+            <div>
+              <p>Você clicou {count} vezes.</p>
+              <button onClick={() => setCount(count + 1)}>
+                Clique aqui
+              </button>
+            </div>
+          );
+        }
+        <p>
+          export default Counter;
+        </p>
+      </div>
+      <h2>
+        3. JSX
+      </h2>
+      <h3>
+        Sintaxe JSX: 
+      </h3>
+    <p>
+      JSX permite escrever HTML dentro do JavaScript. É transformado em chamadas de função JavaScript pelo Babel. Exemplo de renderização condicional usando JSX:
+    </p>
+    <p>
+      Exemplo de renderização condicional com JSX
+    </p>
+    <div style="background-color: gray;"> 
+      <p>
+        import React from 'react';
+      </p>
+      <p>
+        function Greeting(props) {
+      </p>
+        const isLoggedIn = props.isLoggedIn;
+        
+        return (
+          <div>
+            {isLoggedIn ? (
+              <h1>Bem-vindo de volta!</h1>
+            ) : (
+              <h1>Por favor, faça o login.</h1>
+            )}
+          </div>
+        );
+      }
+      <p>
+        export default Greeting;
+      </p>
+    </div>
+    <h2>
+      4. Eventos em React
+    </h2>
+    <h3>
+      Manipulação de eventos:
+    </h3>
+    <p>
+      Exemplo de manipulação de evento de clique em um botão:
+    </p>
+    <div style="background-color: gray;"> 
+      import React from 'react';
+      <p>
+        function Button() {
+      </p>
+      <p>
+        function handleClick() {
+      </p>
+          alert('Botão clicado!');
+        }
+        
+        return (
+          <button onClick={handleClick}>
+            Clique aqui
+          </button>
+          );
+        }
+      <p>
+        export default Button;
+      </p>  
+      </div>
+    <h2>
+      5. Estado e Ciclo de Vida
+    </h2>
+    • Gerenciamento de estado (useState): Exemplo de contador usando useState:
+// Exemplo de uso de useState para gerenciar estado
+import React, { useState } from 'react';
+
+function Counter() {
+  const [count, setCount] = useState(0);
+
+  return (
+    <div>
+      <p>Você clicou {count} vezes.</p>
+      <button onClick={() => setCount(count + 1)}>
+        Clique aqui
+      </button>
+    </div>
+  );
+}
+
+export default Counter;
+    • Hooks de ciclo de vida (useEffect): Exemplo de uso do useEffect para efeitos colaterais:
+// Exemplo de useEffect para efeitos colaterais
+import React, { useState, useEffect } from 'react';
+
+function Timer() {
+  const [seconds, setSeconds] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setSeconds(seconds + 1);
+    }, 1000);
+    return () => clearInterval(interval);
+  }, [seconds]);
+
+  return <p>Tempo decorrido: {seconds} segundos</p>;
+}
+
+export default Timer;
+6. Roteamento
+    • React Router: Exemplo de configuração básica usando React Router:
+// Exemplo de configuração de rotas com React Router
+import React from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+
+function Home() {
+  return <h2>Página Inicial</h2>;
+}
+
+function About() {
+  return <h2>Sobre nós</h2>;
+}
+
+function App() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">Sobre</Link>
+            </li>
+          </ul>
+        </nav>
+
+        <Route path="/" exact component={Home} />
+        <Route path="/about" component={About} />
+      </div>
+    </Router>
+  );
+}
+
+export default App;
+7. Consumo de APIs
+    • Fetch e Axios para chamadas de API: Exemplo de consumo de uma API usando fetch:
+// Exemplo de consumo de API com fetch
+import React, { useState, useEffect } from 'react';
+
+function UserList() {
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch('https://jsonplaceholder.typicode.com/users')
+      .then(response => response.json())
+      .then(data => setUsers(data));
+  }, []);
+
+  return (
+    <div>
+      <h2>Lista de Usuários</h2>
+      <ul>
+        {users.map(user => (
+          <li key={user.id}>{user.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default UserList;
+
+
+
+
+Projetos
+
+Projetos Simples
+1. Calculadora
+Uma calculadora básica em React pode ter as seguintes funcionalidades:
+    • Botões numéricos para inserir números.
+    • Botões de operadores (adição, subtração, multiplicação, divisão).
+    • Botão de igual para calcular o resultado.
+    • Botão de limpar para reiniciar a operação.
+Aqui está um exemplo básico de implementação:
+import React, { useState } from 'react';
+
+function Calculator() {
+  const [display, setDisplay] = useState('');
+  const [currentNumber, setCurrentNumber] = useState('');
+  const [operator, setOperator] = useState('');
+
+  const handleClick = value => {
+    if (value === '=' && operator && currentNumber) {
+      const num1 = parseFloat(display);
+      const num2 = parseFloat(currentNumber);
+      let result = 0;
+      switch (operator) {
+        case '+':
+          result = num1 + num2;
+          break;
+        case '-':
+          result = num1 - num2;
+          break;
+        case '*':
+          result = num1 * num2;
+          break;
+        case '/':
+          result = num1 / num2;
+          break;
+        default:
+          break;
+      }
+      setDisplay(result.toString());
+      setCurrentNumber('');
+      setOperator('');
+    } else if (value === 'C') {
+      setDisplay('');
+      setCurrentNumber('');
+      setOperator('');
+    } else if (isNaN(value)) {
+      setOperator(value);
+      setCurrentNumber(display);
+      setDisplay('');
+    } else {
+      setDisplay(display + value);
+    }
+  };
+
+  return (
+    <div className="calculator">
+      <input type="text" value={display} disabled />
+      <div className="buttons">
+        <button onClick={() => handleClick('7')}>7</button>
+        <button onClick={() => handleClick('8')}>8</button>
+        <button onClick={() => handleClick('9')}>9</button>
+        <button onClick={() => handleClick('/')}>/</button>
+
+        <button onClick={() => handleClick('4')}>4</button>
+        <button onClick={() => handleClick('5')}>5</button>
+        <button onClick={() => handleClick('6')}>6</button>
+        <button onClick={() => handleClick('*')}>*</button>
+
+        <button onClick={() => handleClick('1')}>1</button>
+        <button onClick={() => handleClick('2')}>2</button>
+        <button onClick={() => handleClick('3')}>3</button>
+        <button onClick={() => handleClick('-')}>-</button>
+
+        <button onClick={() => handleClick('0')}>0</button>
+        <button onClick={() => handleClick('.')}>.</button>
+        <button onClick={() => handleClick('=')}>=</button>
+        <button onClick={() => handleClick('+')}>+</button>
+
+        <button onClick={() => handleClick('C')}>C</button>
+      </div>
+    </div>
+  );
+}
+
+export default Calculator;
+2. ToDo List
+Um aplicativo de lista de tarefas simples em React pode ter as seguintes funcionalidades:
+    • Adicionar novas tarefas.
+    • Marcar tarefas como completas.
+    • Excluir tarefas.
+    • Filtrar tarefas (todas, completas, incompletas).
+Aqui está um exemplo básico de implementação:
+import React, { useState } from 'react';
+
+function ToDoList() {
+  const [tasks, setTasks] = useState([]);
+  const [inputValue, setInputValue] = useState('');
+
+  const handleChange = e => {
+    setInputValue(e.target.value);
+  };
+
+  const handleAddTask = () => {
+    if (inputValue.trim() !== '') {
+      const newTask = {
+        id: tasks.length + 1,
+        text: inputValue,
+        completed: false,
+      };
+      setTasks([...tasks, newTask]);
+      setInputValue('');
+    }
+  };
+
+  const handleToggleComplete = id => {
+    const updatedTasks = tasks.map(task =>
+      task.id === id ? { ...task, completed: !task.completed } : task
+    );
+    setTasks(updatedTasks);
+  };
+
+  const handleDeleteTask = id => {
+    const filteredTasks = tasks.filter(task => task.id !== id);
+    setTasks(filteredTasks);
+  };
+
+  return (
+    <div className="todo-list">
+      <input
+        type="text"
+        value={inputValue}
+        onChange={handleChange}
+        placeholder="Adicione uma tarefa"
+      />
+      <button onClick={handleAddTask}>Adicionar</button>
+      <ul>
+        {tasks.map(task => (
+          <li key={task.id} className={task.completed ? 'completed' : ''}>
+            {task.text}
+            <input
+              type="checkbox"
+              checked={task.completed}
+              onChange={() => handleToggleComplete(task.id)}
+            />
+            <button onClick={() => handleDeleteTask(task.id)}>X</button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+export default ToDoList;
+3. Galeria de Imagens
+Um componente simples de galeria de imagens em React pode exibir imagens em miniatura que expandem para uma visualização maior ao serem clicadas.
+Aqui está um exemplo básico de implementação:
+import React, { useState } from 'react';
+
+const images = [
+  'https://via.placeholder.com/150',
+  'https://via.placeholder.com/150',
+  'https://via.placeholder.com/150',
+  // adicione mais URLs de imagens conforme necessário
+];
+
+function ImageGallery() {
+  const [selectedImage, setSelectedImage] = useState('');
+
+  const handleImageClick = imageUrl => {
+    setSelectedImage(imageUrl);
+  };
+
+  return (
+    <div className="image-gallery">
+      <div className="thumbnails">
+        {images.map((imageUrl, index) => (
+          <img
+            key={index}
+            src={imageUrl}
+            alt={`Imagem ${index + 1}`}
+            onClick={() => handleImageClick(imageUrl)}
+          />
+        ))}
+      </div>
+      <div className="main-image">
+        {selectedImage && <img src={selectedImage} alt="Imagem ampliada" />}
+      </div>
+    </div>
+  );
+}
+
+export default ImageGallery;
+
+
+Projetos Intermediarios
+
+1. Blog com CRUD (Create, Read, Update, Delete)
+Um blog com operações CRUD permitirá criar, ler, atualizar e excluir posts. Este projeto envolve várias partes, incluindo gerenciamento de estado global (usando Context API ou Redux), navegação entre páginas, e integração com uma API para armazenamento dos posts.
+Exemplo de Estrutura e Funcionalidades:
+    • Componentes:
+        ◦ PostList: Lista todos os posts.
+        ◦ PostDetail: Exibe detalhes de um post individual.
+        ◦ PostForm: Formulário para adicionar ou editar um post.
+        ◦ PostService: Serviço para interagir com uma API (por exemplo, usando fetch ou Axios).
+    • Funcionalidades:
+        ◦ Listar todos os posts.
+        ◦ Exibir detalhes de um post específico.
+        ◦ Adicionar novos posts.
+        ◦ Editar posts existentes.
+        ◦ Excluir posts.
+Exemplo básico de implementação usando React:
+// Exemplo simplificado de um Blog com CRUD em React
+
+import React, { useState, useEffect } from 'react';
+import PostService from './PostService'; // serviço para manipulação de posts
+
+function Blog() {
+  const [posts, setPosts] = useState([]);
+  const [currentPost, setCurrentPost] = useState(null);
+  const [editing, setEditing] = useState(false);
+
+  useEffect(() => {
+    fetchPosts();
+  }, []);
+
+  const fetchPosts = async () => {
+    try {
+      const response = await PostService.getAllPosts(); // exemplo de função para obter posts
+      setPosts(response.data); // supondo que o response.data contenha os posts
+    } catch (error) {
+      console.error('Erro ao obter os posts:', error);
+    }
+  };
+
+  const addPost = async (newPost) => {
+    try {
+      const response = await PostService.createPost(newPost); // exemplo de função para criar um post
+      setPosts([...posts, response.data]); // adiciona o novo post à lista
+    } catch (error) {
+      console.error('Erro ao adicionar o post:', error);
+    }
+  };
+
+  const deletePost = async (id) => {
+    try {
+      await PostService.deletePost(id); // exemplo de função para deletar um post
+      setPosts(posts.filter(post => post.id !== id)); // remove o post da lista
+    } catch (error) {
+      console.error('Erro ao deletar o post:', error);
+    }
+  };
+
+  const updatePost = async (updatedPost) => {
+    try {
+      const response = await PostService.updatePost(updatedPost); // exemplo de função para atualizar um post
+      setPosts(posts.map(post => (post.id === updatedPost.id ? response.data : post))); // atualiza o post na lista
+      setEditing(false); // sai do modo de edição
+      setCurrentPost(null); // limpa o post atual
+    } catch (error) {
+      console.error('Erro ao atualizar o post:', error);
+    }
+  };
+
+  const editPost = (post) => {
+    setCurrentPost(post);
+    setEditing(true);
+  };
+
+  const cancelEdit = () => {
+    setEditing(false);
+    setCurrentPost(null);
+  };
+
+  return (
+    <div className="blog">
+      <h1>Meu Blog</h1>
+
+      <div className="posts">
+        <h2>Posts</h2>
+        <ul>
+          {posts.map(post => (
+            <li key={post.id}>
+              <h3>{post.title}</h3>
+              <p>{post.content}</p>
+              <button onClick={() => editPost(post)}>Editar</button>
+              <button onClick={() => deletePost(post.id)}>Excluir</button>
+            </li>
+          ))}
+        </ul>
+      </div>
+
+      {editing ? (
+        <PostForm post={currentPost} onSave={updatePost} onCancel={cancelEdit} />
+      ) : (
+        <PostForm onSave={addPost} />
+      )}
+    </div>
+  );
+}
+
+export default Blog;
+2. Aplicação de Notas
+Uma aplicação de notas pode ser uma excelente maneira de praticar o gerenciamento de estados complexos, drag and drop (arrastar e soltar) e a interação do usuário com componentes reutilizáveis.
+Exemplo de Estrutura e Funcionalidades:
+    • Componentes:
+        ◦ NoteList: Lista todas as notas.
+        ◦ Note: Componente individual de nota.
+        ◦ NoteForm: Formulário para adicionar ou editar uma nota.
+        ◦ DraggableNote: Componente de nota que suporta arrastar e soltar.
+    • Funcionalidades:
+        ◦ Adicionar novas notas.
+        ◦ Editar notas existentes.
+        ◦ Excluir notas.
+        ◦ Reordenar notas através de arrastar e soltar.
+Exemplo básico de implementação usando React:
+// Exemplo simplificado de uma Aplicação de Notas em React
+
+import React, { useState } from 'react';
+import NoteForm from './NoteForm'; // componente para adicionar/editar notas
+
+function NoteApp() {
+  const [notes, setNotes] = useState([]);
+  const [editingNote, setEditingNote] = useState(null);
+
+  const addNote = (newNote) => {
+    setNotes([...notes, newNote]);
+  };
+
+  const deleteNote = (id) => {
+    setNotes(notes.filter(note => note.id !== id));
+  };
+
+  const updateNote = (updatedNote) => {
+    setNotes(notes.map(note => (note.id === updatedNote.id ? updatedNote : note)));
+    setEditingNote(null);
+  };
+
+  const editNote = (note) => {
+    setEditingNote(note);
+  };
+
+  const cancelEdit = () => {
+    setEditingNote(null);
+  };
+
+  return (
+    <div className="note-app">
+      <h1>Minhas Notas</h1>
+
+      <NoteForm onSave={editingNote ? updateNote : addNote} onCancel={cancelEdit} initialNote={editingNote} />
+
+      <div className="note-list">
+        {notes.map(note => (
+          <div key={note.id} className="note">
+            <h3>{note.title}</h3>
+            <p>{note.content}</p>
+            <button onClick={() => editNote(note)}>Editar</button>
+            <button onClick={() => deleteNote(note.id)}>Excluir</button>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default NoteApp;
+Estes projetos intermediários proporcionam uma excelente oportunidade para aprimorar suas habilidades em React, explorando conceitos mais avançados como CRUD, gerenciamento de estado global, interação com APIs, e mais. Além disso, eles podem ser estendidos e personalizados conforme necessário para melhor atender às suas necessidades de aprendizado e prática.
+
+
+    </main>
+    <footer>
+        ELISEU@2024
+    </footer>
+</body>
+</html>

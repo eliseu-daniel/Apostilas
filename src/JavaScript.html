@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apostilas</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li>
+                    <a href="index.html">Inicio</a>
+                </li>
+                <li>
+                    <a href="JavaScript.html">JavaScript</a>
+                </li>
+                <li>
+                    <a href="React.html">React</a>
+                </li>
+                <li>
+                    <a href="RN.html">React Native</a>
+                </li>
+                <li>
+                    <a href="php.html">PHP</a>
+                </li>
+                <li>
+                    <a href="html.html">HTML</a>
+                </li>
+                <li>
+                    <a href="css.html">CSS</a>
+                </li>
+                <li>
+                    <a href="kotlin.html">KOTLIN</a>
+                </li>
+                <li>
+                    <a href="contato.html">Contate-me</a>
+                </li>
+            </ul>
+        </nav>    
+    </header>
+    <main>
+
+            <h1>JavaScript</h1>
+            <h2>1. Introdução ao JavaScript</h2>
+            <p>
+                JavaScript é uma linguagem de programação amplamente utilizada para desenvolvimento web. Abaixo estão alguns tópicos importantes sobre sua introdução:
+                <p>
+                    <h3>
+                        História e evolução do JavaScript:
+                    </h3>
+                    <p>
+                        JavaScript foi originalmente criado por Brendan Eich na Netscape e lançado em 1995 como uma linguagem de script para navegadores web. Inicialmente chamado de LiveScript, foi renomeado para JavaScript quando a Sun Microsystems (agora Oracle) fez uma parceria com a Netscape. Desde então, JavaScript evoluiu significativamente e se tornou uma das linguagens mais importantes para desenvolvimento web front-end e back-end.
+                    </p>
+                </p> 
+                <p>
+                    <h3>
+                        Configuração do ambiente de desenvolvimento:
+                    </h3>
+                    <p>
+                        Navegadores: Os navegadores modernos como Google Chrome, Mozilla Firefox, Microsoft Edge, Safari, entre outros, suportam a execução de JavaScript. Cada navegador possui um console de desenvolvedor que permite depuração e execução de código JavaScript.
+                    </p>
+                    <p>
+                        Editores de texto: Editores populares como Visual Studio Code, Sublime Text, Atom, entre outros, são amplamente utilizados para escrever código JavaScript. Eles oferecem recursos como realce de sintaxe, sugestões de código e integração com ferramentas de desenvolvimento.
+                    </p>
+                    <p>
+                        Node.js: É um ambiente de execução JavaScript baseado no motor V8 da Google, utilizado para executar JavaScript fora do navegador. Node.js é amplamente utilizado para desenvolvimento de servidores, automação de tarefas e construção de aplicações web.
+                    </p>
+                </p>
+            </p>        
+<h2>
+    2. Sintaxe Básica
+</h2>
+<h3>
+    Variáveis (var, let, const)
+</h3>    
+<p>  
+    Em JavaScript, variáveis são utilizadas para armazenar dados. Existem três maneiras de declarar variáveis:
+    <p>
+        var: Era a forma tradicional de declarar variáveis antes do ECMAScript 6. Variáveis declaradas com var têm escopo de função ou global.
+        <p>
+            Exemplo:
+            var idade = 30;
+        </p>
+    </p>
+    <p>
+        let: Introduzido no ECMAScript 6, let permite declarar variáveis com escopo de bloco. Variáveis declaradas com let podem ser modificadas após a sua inicialização.
+        <p>    
+            Exemplo:
+            let nome = "João";
+        </p>
+    </p>
+    <p>
+        const: Também introduzido no ECMAScript 6, const é usado para declarar variáveis cujo valor não será alterado. Elas também têm escopo de bloco.
+        <p>
+            Exemplo:
+            const PI = 3.14;
+        </p>
+    </p>
+</p>
+
+<h3>
+    Tipos de dados
+</h3>
+<p>
+    JavaScript é uma linguagem dinamicamente tipada e suporta os seguintes tipos de dados:
+    <p>
+        string: Sequência de caracteres, delimitada por aspas simples (') ou duplas (").
+        <p>
+            Exemplo:
+            let nome = 'Maria';
+        </p>
+    </p>
+</p>
+<p>
+    number: Números inteiros ou decimais.
+    <p>
+        Exemplo:
+        let idade = 25;
+    </p>
+</p>
+    • boolean: Valor verdadeiro (true) ou falso (false).
+Exemplo:
+let temCarro = true;
+    • null: Representa a ausência intencional de qualquer valor de objeto.
+Exemplo:
+let valor = null;
+    • undefined: Indica que uma variável foi declarada, mas ainda não foi atribuída a nenhum valor.
+Exemplo:
+let altura;
+    • symbol: Um tipo de dado cujos valores são únicos e imutáveis. São frequentemente usados para identificadores exclusivos de propriedades de objetos.
+Exemplo:
+const id = Symbol('id');
+Operadores
+JavaScript suporta diversos tipos de operadores:
+    • Aritméticos: Usados para realizar operações matemáticas básicas. Exemplo:
+let soma = 10 + 5; // soma = 15
+    • De atribuição: Usados para atribuir valores a variáveis. Exemplo:
+let x = 5;
+    • De comparação: Usados para comparar valores. Exemplo:
+let a = 10;
+let b = 5;
+console.log(a > b);
+    • Lógicos: Usados para combinar ou inverter valores booleanos. Exemplo:
+let p = true;
+let q = false;
+console.log(p && q); 
+3. Estruturas de Controle
+Condicionais
+As estruturas condicionais permitem executar diferentes blocos de código com base em condições especificadas. Em JavaScript, temos o uso de if, else if e else para criar condicionais.
+Exemplo de if simples:
+let idade = 18;
+
+if (idade >= 18) {
+    console.log("Pode dirigir.");
+}
+Exemplo com else if e else:
+let hora = 14;
+
+if (hora < 12) {
+    console.log("Bom dia!");
+} else if (hora < 18) {
+    console.log("Boa tarde!");
+} else {
+    console.log("Boa noite!");
+}
+Também é possível usar operadores lógicos como && (AND), || (OR) e ! (NOT) para formular condições mais complexas.
+Laços de Repetição
+Os laços de repetição permitem executar um bloco de código várias vezes. Em JavaScript, os principais são for, while e do...while.
+Exemplo de for:
+for (let i = 0; i < 5; i++) {
+    console.log(i);
+}
+Exemplo de while:
+let contador = 0;
+
+while (contador < 5) {
+    console.log(contador);
+    contador++;
+}
+Exemplo de do...while:
+let numero = 1;
+
+do {
+    console.log(numero);
+    numero++;
+} while (numero <= 5);
+Os laços de repetição são fundamentais para automatizar tarefas que precisam ser executadas repetidamente ou até que uma condição específica seja atendida.
+4. Funções
+Declaração e Invocação de Funções
+Em JavaScript, funções são blocos de código que podem ser chamados para executar uma tarefa específica. Elas são declaradas usando a palavra-chave function.
+Exemplo de declaração de função:
+function saudacao(nome) {
+    console.log(`Olá, ${nome}!`);
+}
+Exemplo de invocação de função:
+saudacao('Ana'); // Output: Olá, Ana!
+Parâmetros e Retornos
+Funções podem receber parâmetros (valores que a função espera receber quando é chamada) e retornar valores usando a palavra-chave return.
+Exemplo com parâmetros e retorno:
+function soma(a, b) {
+    return a + b;
+}
+
+let resultado = soma(3, 5);
+console.log(resultado);
+Se uma função não especifica um retorno, ela retorna undefined.
+Funções Anônimas e Arrow Functions
+Funções anônimas são funções sem um nome identificador explícito. Elas são frequentemente usadas como argumentos para outras funções ou atribuídas a variáveis.
+Exemplo de função anônima:
+let quadrado = function(x) {
+    return x * x;
+};
+
+console.log(quadrado(3)); 
+Arrow functions são uma sintaxe mais concisa para definir funções em JavaScript, introduzida no ECMAScript 6.
+Exemplo de arrow function:
+let cubo = (x) => {
+    return x * x * x;
+};
+
+console.log(cubo(2)); 
+Quando uma arrow function possui apenas uma expressão de retorno, as chaves {} e a palavra-chave return podem ser omitidas.
+Exemplo de arrow function simplificada:
+let quadruplo = x => x * 4;
+
+console.log(quadruplo(5)); 
+As funções são componentes fundamentais em JavaScript, permitindo reutilização de código, modularidade e abstração de tarefas complexas em unidades mais gerenciáveis.
+5. Objetos e Arrays
+Criação e Manipulação de Objetos
+Em JavaScript, objetos são estruturas de dados que permitem armazenar e organizar dados em pares de chave-valor. Eles são declarados usando chaves {}.
+Exemplo de criação de objeto:
+let pessoa = {
+    nome: 'João',
+    idade: 30,
+    cidade: 'São Paulo'
+};
+Para acessar propriedades de um objeto, utiliza-se a notação de ponto . ou colchetes [].
+Exemplo de acesso a propriedades de um objeto:
+console.log(pessoa.nome); 
+console.log(pessoa['idade']); 
+Propriedades de objetos podem ser adicionadas, modificadas ou removidas dinamicamente.
+Exemplo de modificação de propriedade de um objeto:
+pessoa.idade = 31;
+console.log(pessoa.idade); 
+
+pessoa.profissao = 'Programador';
+console.log(pessoa); 
+
+delete pessoa.cidade;
+console.log(pessoa); 
+Criação e Manipulação de Arrays
+Arrays em JavaScript são objetos especiais que permitem armazenar múltiplos valores em uma única variável. Eles são declarados usando colchetes [].
+Exemplo de criação de array:
+let frutas = ['maçã', 'banana', 'laranja'];
+Para acessar elementos de um array, utiliza-se o índice do elemento dentro de colchetes [], sendo que o primeiro elemento possui índice 0.
+Exemplo de acesso a elementos de um array:
+console.log(frutas[0]); // Output: maçã
+console.log(frutas[2]); // Output: laranja
+Arrays podem ser modificados adicionando ou removendo elementos, alterando elementos existentes, entre outras operações.
+Exemplo de adição e remoção de elementos em um array:
+frutas.push('morango'); 
+console.log(frutas); 
+
+frutas.pop(); // Remove o último elemento do array ('morango')
+console.log(frutas); 
+Métodos Importantes de Arrays
+JavaScript possui vários métodos embutidos que facilitam a manipulação de arrays. Alguns dos métodos mais utilizados são:
+    • push(): Adiciona um ou mais elementos ao final do array.
+    • pop(): Remove o último elemento do array e retorna esse elemento.
+    • shift(): Remove o primeiro elemento do array e retorna esse elemento.
+    • unshift(): Adiciona um ou mais elementos no início do array.
+    • concat(): Concatena dois ou mais arrays e retorna um novo array.
+    • slice(): Retorna uma cópia de parte do array, selecionada a partir de um ponto inicial até um ponto final (opcional), sem modificar o array original.
+    • splice(): Altera o conteúdo de um array removendo elementos existentes e/ou adicionando novos elementos.
+    • forEach(): Executa uma função em cada elemento do array.
+    • map(): Cria um novo array com os resultados da chamada de uma função para cada elemento do array.
+    • filter(): Cria um novo array com todos os elementos que passam por um teste especificado em uma função.
+6. Manipulação de Strings e Números
+Métodos de Strings
+Em JavaScript, strings são sequências de caracteres que permitem manipulação através de diversos métodos embutidos. Alguns dos métodos mais comuns para manipulação de strings são:
+    • length: Retorna o comprimento da string.
+Exemplo:
+let mensagem = 'Olá, mundo!';
+console.log(mensagem.length); 
+    • toUpperCase() e toLowerCase(): Converte toda a string para maiúsculas ou minúsculas, respectivamente.
+Exemplo:
+let nome = 'Maria';
+console.log(nome.toUpperCase()); 
+console.log(nome.toLowerCase()); 
+    • charAt(index): Retorna o caractere na posição especificada pelo índice.
+Exemplo:
+let frase = 'JavaScript';
+console.log(frase.charAt(0)); 
+console.log(frase.charAt(4)); 
+    • indexOf(substring) e lastIndexOf(substring): Retorna o índice da primeira ou última ocorrência da substring especificada dentro da string, respectivamente.
+Exemplo:
+let texto = 'Olá, como vai?';
+console.log(texto.indexOf('vai')); 
+console.log(texto.lastIndexOf('a')); 
+    • substring(startIndex, endIndex) e slice(startIndex, endIndex): Extraem uma parte da string, especificando o índice de início e fim (opcional). A diferença principal é que substring não aceita índices negativos.
+Exemplo:
+let palavra = 'JavaScript';
+console.log(palavra.substring(0, 4)); 
+console.log(palavra.slice(-6)); 
+    • split(separator): Divide a string em um array de substrings usando o separador especificado.
+Exemplo:
+let frase = 'Olá, como vai?';
+console.log(frase.split(' ')); 
+Métodos de Números
+JavaScript oferece métodos embutidos para manipular números de forma eficiente. Alguns dos métodos mais comuns para números são:
+    • toFixed(decimals): Formata um número usando notação de ponto fixo com um número específico de casas decimais.
+Exemplo:
+let numero = 3.14159;
+console.log(numero.toFixed(2)); 
+    • toString(base): Converte um número para uma string, opcionalmente especificando a base numérica (2 a 36).
+Exemplo:
+let numero = 255;
+console.log(numero.toString(16)); 
+    • parseInt(string, radix) e parseFloat(string): Convertem uma string em um número inteiro ou decimal, respectivamente.
+Exemplo:
+let valor = '123';
+console.log(parseInt(valor)); 
+    • Math object: O objeto Math oferece uma variedade de funções matemáticas, como Math.round(), Math.floor(), Math.ceil(), Math.min(), Math.max(), entre outras.
+Exemplo:
+let numero = 3.7;
+console.log(Math.floor(numero)); 
+console.log(Math.ceil(numero)); 
+Conversões de Tipos
+Em JavaScript, é comum a necessidade de converter entre diferentes tipos de dados, como string para número e vice-versa. Algumas conversões comuns incluem:
+    • String para Number:
+        ◦ parseInt(string): Converte uma string em um número inteiro.
+        ◦ parseFloat(string): Converte uma string em um número decimal.
+Exemplo:
+let texto = '123';
+let numero = parseInt(texto);
+console.log(numero); 
+    • Number para String:
+        ◦ toString(): Converte um número em uma string.
+Exemplo:
+let valor = 456;
+let texto = valor.toString();
+console.log(texto); 
+    • Explicit Conversion:
+        ◦ String(valor): Converte qualquer valor para uma string.
+        ◦ Number(string): Converte uma string para um número.
+Exemplo:
+let numero = Number('789');
+console.log(numero); 
+
+DOM (Document Object Model)
+1. Introdução ao DOM
+O que é o DOM?
+O DOM (Document Object Model) é uma interface de programação para documentos HTML, XML e XHTML. Ele representa a estrutura do documento como uma árvore de objetos, onde cada nó é um objeto representando uma parte do documento, como elementos HTML, atributos, e texto.
+O DOM é essencial para a interação dinâmica com documentos HTML, permitindo que scripts (como JavaScript) manipulem a estrutura, o estilo e o conteúdo de páginas web de forma dinâmica.
+Seleção de Elementos
+Para interagir com elementos HTML em uma página web através do JavaScript, é necessário selecioná-los primeiro. Existem várias formas de selecionar elementos no DOM:
+    1. getElementById: Retorna uma referência ao elemento pelo seu ID único.
+Exemplo:
+let elemento = document.getElementById('meuId');
+    2. getElementsByClassName: Retorna uma coleção de elementos pelo nome da classe.
+Exemplo:
+let elementos = document.getElementsByClassName('minhaClasse');
+    3. getElementsByTagName: Retorna uma coleção de elementos pelo nome da tag HTML.
+Exemplo:
+let elementos = document.getElementsByTagName('p');
+    4. querySelector: Retorna o primeiro elemento que corresponde ao seletor CSS especificado.
+Exemplo:
+let elemento = document.querySelector('#meuId');
+    5. querySelectorAll: Retorna todos os elementos que correspondem ao seletor CSS especificado como uma NodeList.
+Exemplo:
+let elementos = document.querySelectorAll('.minhaClasse');
+    6. Seleção por Hierarquia:
+        ◦ parentNode: Retorna o nó pai do elemento especificado.
+        ◦ childNodes: Retorna uma NodeList de todos os nós filhos do elemento.
+        ◦ firstChild: Retorna o primeiro nó filho do elemento.
+        ◦ lastChild: Retorna o último nó filho do elemento.
+Exemplo:
+let lista = document.getElementById('minhaLista');
+let primeiroItem = lista.firstChild;
+    7. Seleção por Atributos:
+        ◦ getAttribute: Retorna o valor de um atributo especificado de um elemento.
+        ◦ setAttribute: Define ou modifica o valor de um atributo especificado do elemento.
+Exemplo:
+let elemento = document.getElementById('meuElemento');
+let valorDoAtributo = elemento.getAttribute('data-id');
+Esses métodos de seleção de elementos permitem que você manipule dinamicamente o conteúdo, estilo e estrutura de uma página web usando JavaScript, facilitando a interação e a criação de aplicações web interativas.
+2. Manipulação do DOM
+Alteração de Conteúdo
+Para alterar o conteúdo de elementos HTML no DOM usando JavaScript, você pode manipular tanto o texto quanto o HTML dentro desses elementos. Aqui estão alguns métodos comuns:
+    1. Manipulação de Texto:
+        ◦ textContent: Define ou retorna o texto dentro de um elemento, tratando-o como texto puro (ignorando qualquer formatação HTML).
+Exemplo:
+let elemento = document.getElementById('meuElemento');
+elemento.textContent = 'Novo texto';
+        ◦ innerText: Similar a textContent, mas não inclui texto invisível ao usuário (por exemplo, texto em elementos <script> ou <style>).
+Exemplo:
+let elemento = document.getElementById('meuElemento');
+elemento.innerText = 'Texto visível';
+    2. Manipulação de HTML:
+        ◦ innerHTML: Define ou retorna o HTML dentro de um elemento, permitindo HTML válido.
+Exemplo:
+let elemento = document.getElementById('meuElemento');
+elemento.innerHTML = '<strong>Texto em negrito</strong>';
+Estilização
+A estilização de elementos no DOM é feita alterando suas propriedades CSS. Você pode modificar diretamente as propriedades de estilo de um elemento usando JavaScript:
+    1. Estilo Inline:
+        ◦ style.property: Permite acessar ou definir propriedades de estilo diretamente no atributo style do elemento.
+Exemplo:
+let elemento = document.getElementById('meuElemento');
+elemento.style.color = 'red';
+elemento.style.fontSize = '16px';
+    2. Classe CSS:
+        ◦ classList: Permite adicionar, remover e alternar classes CSS em um elemento.
+Exemplo:
+let elemento = document.getElementById('meuElemento');
+elemento.classList.add('destaque');
+elemento.classList.remove('ativo');
+    3. Manipulação de Classes:
+        ◦ className: Permite acessar ou definir a lista de classes CSS de um elemento como uma string.
+Exemplo:
+let elemento = document.getElementById('meuElemento');
+elemento.className = 'destaque';
+Manipulação de Atributos
+Para manipular atributos de elementos no DOM usando JavaScript, você pode modificar, adicionar ou remover atributos conforme necessário:
+    1. getAttribute e setAttribute:
+        ◦ getAttribute: Retorna o valor de um atributo especificado do elemento.
+        ◦ setAttribute: Define ou altera o valor de um atributo especificado do elemento.
+Exemplo:
+let link = document.getElementById('meuLink');
+let hrefValue = link.getAttribute('href');
+link.setAttribute('href', 'https://www.exemplo.com');
+    2. Remoção de Atributo:
+        ◦ removeAttribute: Remove um atributo especificado do elemento.
+Exemplo:
+let imagem = document.getElementById('minhaImagem');
+imagem.removeAttribute('alt');
+3. Eventos
+Eventos no DOM permitem que scripts JavaScript respondam a ações do usuário ou mudanças no estado do documento. Aqui estão os principais conceitos e práticas relacionadas a eventos:
+Adição de Eventos
+Para adicionar um evento a um elemento no DOM usando JavaScript, você pode utilizar métodos como addEventListener ou atribuir diretamente um evento ao elemento.
+    1. addEventListener:
+        ◦ addEventListener(evento, função, useCapture): Adiciona um ouvinte de evento ao elemento especificado. O parâmetro evento é o tipo de evento a ser tratado (como "click", "mouseover", etc.), função é a função que será executada quando o evento ocorrer, e useCapture é opcional e define se o evento deve ser capturado durante a fase de propagação.
+Exemplo:
+let botao = document.getElementById('meuBotao');
+
+botao.addEventListener('click', function() {
+    alert('Botão clicado!');
+});
+    2. Atribuição direta de eventos:
+        ◦ Você também pode atribuir um evento diretamente a um elemento HTML usando atributos como onclick, onmouseover, etc. Porém, essa abordagem não é tão flexível quanto addEventListener.
+Exemplo:
+html
+<button id="meuBotao" onclick="alert('Botão clicado!')">Clique aqui</button>
+Manipulação de Eventos
+Quando um evento ocorre, o navegador pode executar uma função específica, conhecida como tratador de evento ou listener. Dentro dessa função, você pode manipular o evento e acessar informações sobre ele, como o elemento alvo (event.target) e propriedades relacionadas ao evento.
+Exemplo de manipulação de evento:
+let botao = document.getElementById('meuBotao');
+
+botao.addEventListener('click', function(event) {
+    console.log('Botão clicado!');
+    console.log('Elemento alvo:', event.target);
+});
+Eventos Comuns
+Existem muitos tipos de eventos que podem ser tratados no DOM. Alguns dos eventos mais comuns incluem:
+    • Eventos de Mouse:
+        ◦ click: Ocorre quando o usuário clica em um elemento.
+        ◦ mouseover e mouseout: Ocorrem quando o cursor do mouse entra ou sai de um elemento.
+        ◦ mousemove: Ocorre quando o cursor do mouse se move sobre um elemento.
+    • Eventos de Teclado:
+        ◦ keydown, keypress e keyup: Ocorrem quando o usuário pressiona ou libera uma tecla.
+    • Eventos de Formulário:
+        ◦ submit: Ocorre quando um formulário é enviado.
+        ◦ change: Ocorre quando o valor de um elemento de formulário é alterado (input, select, textarea).
+    • Eventos de Janela:
+        ◦ load: Ocorre quando um recurso e seus dependentes foram completamente carregados.
+        ◦ resize: Ocorre quando a janela do navegador é redimensionada.
+    • Eventos de Documento:
+        ◦ DOMContentLoaded: Ocorre quando o HTML inicial do documento foi completamente carregado e analisado, sem aguardar imagens e folhas de estilo serem carregadas.
+
+
+ESNext (JavaScript Moderno)
+1. ES6 e Além
+Let e Const
+let e const são novas formas de declarar variáveis introduzidas no ECMAScript 6 (ES6).
+    • let: Declara uma variável local no escopo do bloco onde ela é definida. Variáveis declaradas com let podem ser atualizadas, mas não podem ser redeclaradas no mesmo escopo.
+Exemplo:
+let idade = 30;
+idade = 31; // válido
+    • const: Declara uma constante cujo valor é fixo e não pode ser alterado. Ela possui escopo de bloco como let.
+Exemplo:
+const PI = 3.14159;
+// PI = 3; // erro: não é possível reatribuir valor a uma constante
+Template Strings
+Template Strings permitem criar strings com interpolação de variáveis e suporte a quebras de linha usando a sintaxe de ${}.
+Exemplo:
+let nome = 'João';
+let idade = 30;
+let mensagem = `Olá, meu nome é ${nome} e eu tenho ${idade} anos.`;
+console.log(mensagem);
+Desestruturação
+A desestruturação permite extrair dados de arrays ou objetos em variáveis distintas de forma mais conveniente.
+Exemplo com arrays:
+let numeros = [1, 2, 3];
+let [a, b, c] = numeros;
+console.log(a, b, c); // Output: 1 2 3
+Exemplo com objetos:
+let pessoa = { nome: 'Ana', idade: 25 };
+let { nome, idade } = pessoa;
+console.log(nome, idade); // Output: Ana 25
+Operador Spread e Rest
+O operador Spread (...) permite expandir uma expressão em múltiplos elementos.
+Exemplo:
+let numeros = [1, 2, 3];
+let numeros2 = [...numeros, 4, 5, 6];
+console.log(numeros2); // Output: [1, 2, 3, 4, 5, 6]
+O operador Rest (...) coleta múltiplos elementos em um array.
+Exemplo:
+function soma(...numeros) {
+    return numeros.reduce((total, num) => total + num, 0);
+}
+
+console.log(soma(1, 2, 3, 4, 5)); // Output: 15
+2. Classes
+Declaração de Classes
+Classes em JavaScript oferecem uma sintaxe mais simples e clara para criar objetos e lidar com herança.
+Exemplo de declaração de classe:
+class Pessoa {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    apresentar() {
+        console.log(`Olá, meu nome é ${this.nome} e eu tenho ${this.idade} anos.`);
+    }
+}
+
+let pessoa1 = new Pessoa('Maria', 30);
+pessoa1.apresentar();
+Construtores
+O método constructor é um método especial de uma classe para inicializar objetos criados com a classe.
+Exemplo:
+class Carro {
+    constructor(marca, modelo) {
+        this.marca = marca;
+        this.modelo = modelo;
+    }
+}
+
+let meuCarro = new Carro('Toyota', 'Corolla');
+console.log(meuCarro.marca, meuCarro.modelo); // Output: Toyota Corolla
+Herança
+Classes em JavaScript suportam herança através da palavra-chave extends para criar uma nova classe com base em uma classe existente.
+Exemplo:
+class Animal {
+    constructor(nome) {
+        this.nome = nome;
+    }
+
+    falar() {
+        console.log(`${this.nome} faz algum som.`);
+    }
+}
+
+class Cachorro extends Animal {
+    falar() {
+        console.log(`${this.nome} faz au au!`);
+    }
+}
+
+let meuCachorro = new Cachorro('Rex');
+meuCachorro.falar(); // Output: Rex faz au au!
+3. Módulos
+Exportação e Importação de Módulos
+Módulos em JavaScript permitem organizar o código em arquivos separados e importar/exportar funcionalidades entre esses arquivos.
+Exemplo de exportação em um arquivo utils.js:
+// utils.js
+export function soma(a, b) {
+    return a + b;
+}
+
+export const PI = 3.14159;
+Exemplo de importação em outro arquivo:
+
+// main.js
+import { soma, PI } from './utils.js';
+
+console.log(soma(2, 3)); // Output: 5
+console.log(PI); // Output: 3.14159
+Estrutura de um Projeto Modular
+Estruturar um projeto modular envolve dividir o código em arquivos separados por funcionalidade e utilizar importações/exportações para conectar esses arquivos.
+Estrutura básica:
+css
+projeto/
+│
+├── index.html
+├── main.js
+└── utils.js
+4. Promises e Async/Await
+Criação e Uso de Promises
+Promises são objetos que representam a eventual conclusão ou falha de uma operação assíncrona. Elas são usadas para operações que levam tempo, como requisições HTTP.
+Exemplo de criação de uma Promise:
+function fazerRequisicao() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Dados da requisição');
+            // ou reject(new Error('Erro na requisição'));
+        }, 2000);
+    });
+}
+
+fazerRequisicao().then(resultado => {
+    console.log(resultado); // Output: Dados da requisição
+}).catch(erro => {
+    console.error(erro);
+});
+Async/Await para Operações Assíncronas
+Async/Await é uma sintaxe assíncrona introduzida no ES8 que simplifica o uso de Promises e torna o código mais legível.
+Exemplo de uso de async/await:
+function fazerRequisicao() {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            resolve('Dados da requisição');
+        }, 2000);
+    });
+}
+
+async function executarRequisicao() {
+    try {
+        let resultado = await fazerRequisicao();
+        console.log(resultado); // Output: Dados da requisição
+    } catch (erro) {
+        console.error(erro);
+    }
+}
+
+executarRequisicao();
+Async/Await simplifica o fluxo de código assíncrono, tornando-o mais claro e fácil de entender em comparação ao uso tradicional de Promises com .then() e .catch().
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Node.js e Express
+1. Introdução ao Node.js
+O que é Node.js?
+Node.js é um ambiente de execução de código JavaScript do lado do servidor, construído sobre o motor JavaScript V8 da Google. Ele permite que você desenvolva aplicações web escaláveis e de alta performance usando JavaScript tanto no frontend quanto no backend.
+Configuração do Ambiente
+Para configurar o ambiente Node.js, siga estes passos básicos:
+    1. Instalação do Node.js: Baixe e instale o Node.js a partir do site oficial. O Node.js inclui o Node Package Manager (NPM) para gerenciar pacotes.
+    2. Verificação da Instalação: Após a instalação, verifique se o Node.js está corretamente instalado digitando node -v no terminal. Para verificar o NPM, use npm -v.
+    3. Editor de Texto ou IDE: Escolha um editor de texto ou IDE para desenvolvimento Node.js, como VS Code, Atom, Sublime Text, etc.
+2. Módulos do Node.js
+Core Modules (módulos principais)
+Node.js vem com um conjunto de módulos principais que fornecem funcionalidades para diferentes tarefas.
+    • fs (File System): Fornece métodos para interagir com o sistema de arquivos do sistema operacional.
+Exemplo:
+const fs = require('fs');
+fs.readFile('arquivo.txt', 'utf8', (err, data) => {
+    if (err) throw err;
+    console.log(data);
+});
+    • path: Fornece utilitários para trabalhar com caminhos de arquivos e diretórios.
+Exemplo:
+const path = require('path');
+console.log(path.resolve(__dirname, 'arquivos', 'meuarquivo.txt'));
+    • http: Permite criar um servidor HTTP para lidar com requisições e respostas.
+Exemplo básico de criação de um servidor HTTP:
+const http = require('http');
+
+const servidor = http.createServer((req, res) => {
+    res.writeHead(200, { 'Content-Type': 'text/html' });
+    res.end('Hello World!');
+});
+
+servidor.listen(3000, () => {
+    console.log('Servidor rodando em http://localhost:3000/');
+});
+Criação e Uso de Módulos Personalizados
+Você pode criar seus próprios módulos no Node.js para modularizar seu código e reutilizar funcionalidades em diferentes partes da sua aplicação.
+Exemplo de um módulo personalizado meumodulo.js:
+// meumodulo.js
+function soma(a, b) {
+    return a + b;
+}
+
+module.exports = soma;
+Exemplo de uso desse módulo em outro arquivo:
+const soma = require('./meumodulo');
+
+console.log(soma(2, 3)); // Output: 5
+NPM (Node Package Manager)
+O NPM é o gerenciador de pacotes padrão do Node.js que permite instalar e gerenciar bibliotecas de terceiros (pacotes).
+Principais comandos:
+    • npm install <pacote>: Instala um pacote.
+    • npm init: Inicia um novo projeto Node.js.
+    • npm start: Executa o script start definido no arquivo package.json.
+3. Introdução ao Express
+Configuração do Express
+Express.js é um framework web minimalista para Node.js que simplifica o desenvolvimento de aplicações web.
+Para configurar o Express, primeiro instale-o usando NPM:
+npm install express
+Exemplo básico de configuração de uma aplicação Express:
+const express = require('express');
+const app = express();
+const porta = 3000;
+
+app.listen(porta, () => {
+    console.log(`Servidor rodando em http://localhost:${porta}/`);
+});
+Estrutura Básica de uma Aplicação Express
+Uma aplicação Express geralmente tem a seguinte estrutura básica:
+    • Configuração de rotas
+    • Definição de middlewares
+    • Integração com templates (opcional)
+    • Interação com banco de dados (opcional)
+4. Rotas e Middlewares
+Definição de Rotas
+Rotas no Express definem como a aplicação responde a requisições HTTP específicas (como GET, POST, etc.) para determinados caminhos.
+Exemplo de definição de uma rota:
+app.get('/', (req, res) => {
+    res.send('Hello World!');
+});
+Parâmetros de Rotas
+Você pode definir parâmetros nas rotas para capturar valores dinâmicos de URLs.
+Exemplo de rota com parâmetro:
+app.get('/usuarios/:id', (req, res) => {
+    res.send(`ID do usuário: ${req.params.id}`);
+});
+Middlewares
+Middlewares são funções que têm acesso ao objeto de requisição (req), ao objeto de resposta (res) e à próxima função de middleware no ciclo de solicitação-resposta do aplicativo.
+Exemplo de middleware simples:
+app.use(express.json()); // Middleware para processar JSON em requisições
+
+app.use((req, res, next) => {
+    console.log('Requisição recebida em:', new Date());
+    next();
+});
+5. Trabalhando com APIs
+Criação de Endpoints
+Endpoints em aplicações Express são os pontos de entrada que definem como os clientes podem interagir com sua API.
+Exemplo de criação de um endpoint para API:
+app.get('/api/usuarios', (req, res) => {
+    res.json({ usuarios: [ { id: 1, nome: 'Maria' }, { id: 2, nome: 'João' } ] });
+});
+Métodos HTTP (GET, POST, PUT, DELETE)
+Express suporta todos os principais métodos HTTP para interações RESTful:
+    • GET: Recupera recursos.
+    • POST: Cria um novo recurso.
+    • PUT: Atualiza um recurso existente.
+    • DELETE: Remove um recurso.
+Exemplo de uso de métodos HTTP em rotas:
+app.post('/api/usuarios', (req, res) => {
+    // Código para criar um novo usuário
+});
+
+app.put('/api/usuarios/:id', (req, res) => {
+    // Código para atualizar um usuário pelo ID
+});
+
+app.delete('/api/usuarios/:id', (req, res) => {
+    // Código para excluir um usuário pelo ID
+});
+Manipulação de Dados com Express
+Para manipular dados em uma aplicação Express, você pode integrar bancos de dados, como MongoDB, MySQL, PostgreSQL, entre outros, usando bibliotecas específicas (por exemplo, mongoose para MongoDB).
+Exemplo básico de integração com MongoDB usando Mongoose:
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost:27017/minhaBaseDeDados', {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+const UsuarioSchema = new mongoose.Schema({
+    nome: String,
+    idade: Number
+});
+
+const Usuario = mongoose.model('Usuario', UsuarioSchema);
+
+app.get('/api/usuarios', async (req, res) => {
+    try {
+        const usuarios = await Usuario.find();
+        res.json(usuarios);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+<p>
+    Esses conceitos e práticas são fundamentais para desenvolver aplicações web modernas usando Node.js e Express, aproveitando o poder do JavaScript tanto no lado do servidor quanto no cliente.
+</p>
+    </main>
+    <footer>
+        ELISEU@2024
+    </footer>
+</body>
+</html>
